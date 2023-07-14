@@ -25,22 +25,23 @@ export class RegisterComponent {
   ngOnInit(): void {}
 
   onSubmit(){
-    this.http.post(this.url, this.formRegister.value).subscribe(
-      response=> console.log(response)
-      
-      // response =>{
-      //   console.log('Request Successful:', response);        
-      // },
-      // error =>{
-      // console.error('Request Failed:',error);
-      // }      
-    );
-    // if (this.formRegister.valid) {
-    // Form is valid, perform the desired actions here
-    //   console.log(this.formRegister.value);
-    // }
-    //  else {
-    // Form is invalid, display error messages or handle as needed
-    // }
+    if (this.formRegister.valid) {
+      const formData = {
+        username: this.formRegister.value.username,
+        password: this.formRegister.value.password
+      };
+
+      console.log('Form Data:', formData);
+     // Make the HTTP request
+      this.http.post(this.url, this.formRegister.value).subscribe(
+        response => {
+          console.log('Response:', response);
+          // this.formRegister.reset(); // Reset the form after successful request
+        },
+        error => {
+          console.error('Error:', error);
+        }
+      );
+    }
   }
 }
