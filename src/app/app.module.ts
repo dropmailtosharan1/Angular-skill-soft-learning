@@ -9,13 +9,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SummaryWidgetComponent } from './widget/summary-widget/summary-widget.component';
+import { ChartWidgetComponent } from './widget/chart-widget/chart-widget.component';
+import { TableWidgetComponent } from './widget/table-widget/table-widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    SummaryWidgetComponent,
+    ChartWidgetComponent,
+    TableWidgetComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

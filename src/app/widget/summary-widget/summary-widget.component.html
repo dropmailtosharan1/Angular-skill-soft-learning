@@ -1,0 +1,25 @@
+
+<header>
+    <img src="./../../assets/Image.jpg" alt="Flower-logo">
+    <h1><a href="index.html">Skillsoft weight Tracker</a></h1>
+</header>
+<nav>
+    <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/register">Register</a></li>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/employees">Employees</a></li>
+        <li><a routerLink="/chart">Chart</a></li>
+        <li><a routerLink="/summary">Summary</a></li>
+        <li><a routerLink="/table-data">Table</a></li>
+    </ul>
+</nav>
+<div id="container">
+    <main><div style="display: flex; gap: 20px;">
+    <h3>Summary Widget</h3>
+    <!-- Add your summary content here -->
+    <p>Total Users: {{ summaryData.totalUsers }}</p>
+  <p>Total Sales: {{ summaryData.totalSales }}</p>
+  <p>Total Revenue: ${{ summaryData.totalRevenue }}</p>
+  </div></main></div>
+  
